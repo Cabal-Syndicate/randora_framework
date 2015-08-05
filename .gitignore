@@ -1,0 +1,38 @@
+#Backup Files
+*~
+
+#Documentation Files
+docs.json
+__dummy.html
+docs
+
+#Binaries
+*.o
+*.obj
+*.a
+bin
+lib
+
+#DUB files
+dub.selections.json
+.dub
+
+#Logs
+logs
+
+#Databases
+db
+
+#Temporary Directories
+tmp
+
+#Misc
+sdl2
+
+#Debugger
+.gdbinit
+
+#Assets moved from scaffolds when built
+public/assets
+public/engine
+public/ui

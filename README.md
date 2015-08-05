@@ -1,2 +1,2 @@
-# Randora-Framework
-Framework for the Randora Game Engine
+# Randora-Engine
+Randora Engine
