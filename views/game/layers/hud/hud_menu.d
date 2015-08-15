@@ -16,5 +16,15 @@ class HUDMenu(Master) : UIContextMenu!(Master, HUDMenu){
 		this.alignment.y	= this.background.alignment.ALIGNMENT.BOTTOM;
 		super.on_init();
 	}
+	
+	override void on_key_up(){
+		super.on_key_up();
+		this.alignment.y = this.background.alignment.ALIGNMENT.TOP;
+	}
+	
+	override void on_key_down(){
+		super.on_key_down();
+		this.alignment.y = this.background.alignment.ALIGNMENT.BOTTOM;
+	}
 }
 

@@ -18,6 +18,10 @@ class App : UIApp!(App, App){
 		this.add_slave(this.main_window);
 	}
 	
+	override void on_key_escape(){
+		this.quit = true;
+	}
+	
 	@property{
 		override ref typeof(this) app(){ return this; }
 	}

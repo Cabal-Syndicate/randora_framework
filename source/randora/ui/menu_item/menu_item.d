@@ -2,6 +2,7 @@ module randora.ui.menu_item.menu_item;
 
 import randora.ui.menu_item;
 class UIMenuItem(Master, ObjectType) : RNDContainer!(Master, ObjectType){
+	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.ui.menu_item.events;
 	mixin Clean;
 	mixin Draw;
@@ -9,6 +10,12 @@ class UIMenuItem(Master, ObjectType) : RNDContainer!(Master, ObjectType){
 	mixin Load;
 	mixin Loop;
 	mixin Update;
+	
+	/+++Properties+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
+	import randora.ui.menu_item.properties;
+	mixin Font;		//UIFont!(RNDMenuItem) font
+	mixin Icon;		//string icon
+	mixin Title;	//string title
 	
 	this(Master master){
 		super(master);
@@ -18,21 +25,5 @@ class UIMenuItem(Master, ObjectType) : RNDContainer!(Master, ObjectType){
 	this(Master master, string title){
 		this.title = title;
 		this(master);
-	}
-	/+
-	@property{
-		import resource.font;
-		private UIFont!(RNDMenuItem) _font = null;
-		public ref UIFont!(RNDMenuItem) font(){ return this._font; }
-	}
-	+/
-	@property{
-		private string _icon = "";
-		public ref string icon(){ return this._icon; }
-	}
-	
-	@property{
-		private string _title = "";
-		public ref string title(){ return this._title; }
 	}
 }

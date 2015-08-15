@@ -1,0 +1,30 @@
+module randora.engine.objects.events.input.keyboard.roman_keys;
+
+package import randora.engine.objects.events.input.keyboard.roman_keys.roman_keys;
+
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_a;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_b;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_c;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_d;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_e;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_f;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_g;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_h;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_i;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_j;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_k;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_l;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_m;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_n;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_o;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_p;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_q;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_r;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_s;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_t;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_u;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_v;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_w;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_x;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_y;
+package import randora.engine.objects.events.input.keyboard.roman_keys.key_z;
