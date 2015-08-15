@@ -4,6 +4,7 @@ package import randora.engine.container.events.clean;
 package import randora.engine.container.events.clear;
 package import randora.engine.container.events.draw;
 package import randora.engine.container.events.event;
+package import randora.engine.container.events.input;
 package import randora.engine.container.events.init;
 package import randora.engine.container.events.load;
 package import randora.engine.container.events.log;

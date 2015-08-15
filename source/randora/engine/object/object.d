@@ -2,8 +2,7 @@ module randora.engine.object.object;
 
 /+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  + Authors: Master Foo
- + Bugs: None
- + Date: 2015-06-11
+ + Date: 2015-08-05
  + Examples:
  + -----------------------------------------------------------------------------
  + void main(){
@@ -56,18 +55,15 @@ class RNDObject{
 	mixin RNDStart;
 	mixin RNDUpdate;
 	
-	RNDObject[] members = null;
+	/+++IO Events++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
+	import randora.engine.objects.events.input;
+	mixin Input;
 	
-	string type = "";
-	
-	@property{
-		private string _name = "";
-		public ref string name(){ return this._name; }
-		public const(char)* const_char_name(){
-			import std.string;
-			return std.string.toStringz(this.name);
-		}
-	}
+	/+++Properties+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
+	import randora.engine.object.properties;
+	mixin PropertyMembers;	//RNDObject[] members
+	mixin PropertyName;		//string name
+	mixin PropertyType;		//string type
 	
 	/+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	 + this does this.
@@ -76,10 +72,6 @@ class RNDObject{
 	this(){
 		this.type = "RNDObject";
 		this.name = "object";
-	}
-	
-	void add_member(RNDObject member){
-		this.members ~= member;
 	}
 }
 

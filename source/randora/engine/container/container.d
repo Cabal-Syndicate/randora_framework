@@ -9,6 +9,7 @@ class RNDContainer(Master, ObjectType) : RNDWidget!(Master){
 	mixin Draw;
 	mixin Event;
 	mixin Init;
+	mixin Input;
 	mixin Load;
 	mixin Log;
 	mixin Loop;
@@ -20,12 +21,8 @@ class RNDContainer(Master, ObjectType) : RNDWidget!(Master){
 	mixin Update;
 	
 	/+++Properties+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
-	public RNDWidget!(ObjectType)[] slaves = null;
-	
-	void add_slave(RNDWidget!(ObjectType) slave){
-		slave.z_index = this.slaves.length;
-		this.slaves ~= slave;
-	}
+	import randora.engine.container.properties;
+	mixin Slaves;	//public RNDWidget!(ObjectType)[] slaves
 	
 	this(Master master){
 		super(master);

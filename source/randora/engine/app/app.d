@@ -2,8 +2,16 @@ module randora.engine.app.app;
 
 import randora.engine.app;
 class RNDApp(Master, AppType) : RNDContainer!(Master, AppType){
-	public bool						quit	= false;
-	public SDLSDL!(typeof(this))	sdl		= null;
+	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
+	import randora.engine.app.events;
+	mixin Init;
+	mixin Load;
+	mixin Start;
+	
+	/+++Properties+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
+	import randora.engine.app.properties;
+	mixin PropertyQuit;
+	mixin PropertySDL;
 	
 	this(Master master = null){
 		super(master);
@@ -15,11 +23,6 @@ class RNDApp(Master, AppType) : RNDContainer!(Master, AppType){
 		assert(this.sdl !is null);
 	}
 	
-	import randora.engine.app.events;
-	mixin Init;
-	mixin Load;
-	mixin Start;
-	
 	void game_loop(){
 		while(!quit){
 			this.event();
@@ -28,6 +31,16 @@ class RNDApp(Master, AppType) : RNDContainer!(Master, AppType){
 			this.render();
 			this.clean();
 			this.update();
+		}
+	}
+	
+	override void on_event(){
+		super.on_event();
+		if(this.event_quit){
+			this.quit = true;
+		}
+		while(SDL_PollEvent(&this.sdl_event) != 0){
+			this.input(this.sdl_event.key.keysym.sym);
 		}
 	}
 }
