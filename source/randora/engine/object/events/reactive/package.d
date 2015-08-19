@@ -1,6 +1,6 @@
 module randora.engine.object.events.reactive;
 
-package import randora.engine.object.events;
+package import randora.engine.object.events.reactive.reactive;
 
 package import randora.engine.object.events.reactive.clean;
 package import randora.engine.object.events.reactive.clear;

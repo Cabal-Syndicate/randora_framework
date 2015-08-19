@@ -5,16 +5,32 @@ mixin template IlluminationKeys(){
 	mixin KeyKBDIllumtoggle;
 	mixin KeyKBDIllumup;
 	
-	void on_illumination_keys(int key){
+	void on_illumination_keys_down(int key){
 		switch(key){
 			case SDLK_KBDILLUMDOWN:
-				this.on_key_kbdillumdown();
+				this.on_keydown_kbdillumdown();
 				break;
 			case SDLK_KBDILLUMTOGGLE:
-				this.on_key_kbdillumtoggle();
+				this.on_keydown_kbdillumtoggle();
 				break;
 			case SDLK_KBDILLUMUP:
-				this.on_key_kbdillumup();
+				this.on_keydown_kbdillumup();
+				break;
+			default:
+				break;
+		}
+	}
+	
+	void on_illumination_keys_up(int key){
+		switch(key){
+			case SDLK_KBDILLUMDOWN:
+				this.on_keyup_kbdillumdown();
+				break;
+			case SDLK_KBDILLUMTOGGLE:
+				this.on_keyup_kbdillumtoggle();
+				break;
+			case SDLK_KBDILLUMUP:
+				this.on_keyup_kbdillumup();
 				break;
 			default:
 				break;

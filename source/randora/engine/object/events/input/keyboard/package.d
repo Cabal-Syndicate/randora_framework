@@ -1,6 +1,6 @@
-module randora.engine.objects.events.input.keyboard;
+module randora.engine.object.events.input.keyboard;
 
-package import randora.engine.objects.events.input.keyboard.keybord;
+package import randora.engine.object.events.input.keyboard.keyboard;
 
 package import randora.engine.objects.events.input.keyboard.application_control_keys;
 package import randora.engine.objects.events.input.keyboard.audio_keys;

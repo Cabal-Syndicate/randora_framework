@@ -17,11 +17,11 @@ class App : UIApp!(App, App){
 		this.main_window = new MainWindow!(typeof(this))(this);
 		this.add_slave(this.main_window);
 	}
-	
-	override void on_key_escape(){
+	/+
+	override void on_keydown_escape(){
 		this.quit = true;
 	}
-	
+	+/
 	@property{
 		override ref typeof(this) app(){ return this; }
 	}

@@ -1,5 +1,5 @@
-module randora.engine.objects.events.input;
+module randora.engine.object.events.input;
 
-package import randora.engine.objects.events.input.input;
+package import randora.engine.object.events.input.input;
 
-package import randora.engine.objects.events.input.keyboard;
+//package import randora.engine.object.events.input.keyboard;

@@ -17,8 +17,9 @@ class MainWindow(Master) : UIWindow!(Master, MainWindow){
 		this.screens = new Screens!(typeof(this))(this);
 		this.add_slave(this.screens);
 	}
-	
-	override void on_key_b(){
+	/+
+	override void on_keydown_b(){
 		import std.stdio; "bbbb".writeln;
 	}
+	+/
 }

@@ -1,6 +1,6 @@
 module randora.engine.object;
 
-public import randora.engine.object.object;
+package import randora.engine.object.object;
 
-public import randora.engine.object.events;
+//package import randora.engine.object.events;
 
