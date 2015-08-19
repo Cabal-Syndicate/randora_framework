@@ -16,49 +16,98 @@ mixin template ModifierKeys(){
 	mixin KeyRgui;
 	mixin KeyRshift;
 	
-	void on_modifier_keys(int key){
+	void on_modifier_keys_down(int key){
 		switch(key){
 			case SDLK_APPLICATION:
-				this.on_key_application();
+				this.on_keydown_application();
 				break;
 			case SDLK_BACKSPACE:
-				this.on_key_backspace();
+				this.on_keydown_backspace();
 				break;
 			case SDLK_CAPSLOCK:
-				this.on_key_capslock();
+				this.on_keydown_capslock();
 				break;
 			case SDLK_DELETE:
-				this.on_key_delete();
+				this.on_keydown_delete();
 				break;
 			case SDLK_ESCAPE:
-				this.on_key_escape();
+				this.on_keydown_escape();
 				break;
 			case SDLK_LALT:
-				this.on_key_lalt();
+				this.on_keydown_lalt();
 				break;
 			case SDLK_LCTRL:
-				this.on_key_lctrl();
+				this.on_keydown_lctrl();
 				break;
 			case SDLK_LGUI:
-				this.on_key_lgui();
+				this.on_keydown_lgui();
 				break;
 			case SDLK_LSHIFT:
-				this.on_key_lshift();
+				this.on_keydown_lshift();
 				break;
 			case SDLK_MENU:
-				this.on_key_menu();
+				this.on_keydown_menu();
 				break;
 			case SDLK_RALT:
-				this.on_key_ralt();
+				this.on_keydown_ralt();
 				break;
 			case SDLK_RCTRL:
-				this.on_key_rctrl();
+				this.on_keydown_rctrl();
 				break;
 			case SDLK_RGUI:
-				this.on_key_rgui();
+				this.on_keydown_rgui();
 				break;
 			case SDLK_RSHIFT:
-				this.on_key_rshift();
+				this.on_keydown_rshift();
+				break;
+			default:
+				break;
+		}
+	}
+	
+	void on_modifier_keys_up(int key){
+		switch(key){
+			case SDLK_APPLICATION:
+				this.on_keyup_application();
+				break;
+			case SDLK_BACKSPACE:
+				this.on_keyup_backspace();
+				break;
+			case SDLK_CAPSLOCK:
+				this.on_keyup_capslock();
+				break;
+			case SDLK_DELETE:
+				this.on_keyup_delete();
+				break;
+			case SDLK_ESCAPE:
+				this.on_keyup_escape();
+				break;
+			case SDLK_LALT:
+				this.on_keyup_lalt();
+				break;
+			case SDLK_LCTRL:
+				this.on_keyup_lctrl();
+				break;
+			case SDLK_LGUI:
+				this.on_keyup_lgui();
+				break;
+			case SDLK_LSHIFT:
+				this.on_keyup_lshift();
+				break;
+			case SDLK_MENU:
+				this.on_keyup_menu();
+				break;
+			case SDLK_RALT:
+				this.on_keyup_ralt();
+				break;
+			case SDLK_RCTRL:
+				this.on_keyup_rctrl();
+				break;
+			case SDLK_RGUI:
+				this.on_keyup_rgui();
+				break;
+			case SDLK_RSHIFT:
+				this.on_keyup_rshift();
 				break;
 			default:
 				break;

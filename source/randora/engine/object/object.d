@@ -40,24 +40,8 @@ import randora.engine.object;
 
 class RNDObject{
 	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
-	mixin RNDClean;
-	mixin RNDClear;
-	mixin RNDDraw;
-	mixin RNDEvent;
-	mixin RNDInit;
-	mixin RNDLoad;
-	mixin RNDLog;
-	mixin RNDLoop;
-	mixin RNDPrint;
-	mixin RNDRender;
-	mixin RNDResize;
-	mixin RNDSort;
-	mixin RNDStart;
-	mixin RNDUpdate;
-	
-	/+++IO Events++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
-	import randora.engine.objects.events.input;
-	mixin Input;
+	import randora.engine.object.events;
+	mixin Events;
 	
 	/+++Properties+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.engine.object.properties;

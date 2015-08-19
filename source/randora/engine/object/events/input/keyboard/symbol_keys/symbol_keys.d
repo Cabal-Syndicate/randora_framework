@@ -34,103 +34,206 @@ mixin template SymbolKeys(){
 	mixin KeyTab;
 	mixin KeyUnderscore;
 	
-	void on_symbol_keys(int key){
+	void on_symbol_keys_down(int key){
 		switch(key){
 			case SDLK_AMPERSAND:
-				this.on_key_ampersand();
+				this.on_keydown_ampersand();
 				break;
 			case SDLK_ASTERISK:
-				this.on_key_asterisk();
+				this.on_keydown_asterisk();
 				break;
 			case SDLK_AT:
-				this.on_key_at();
+				this.on_keydown_at();
 				break;
 			case SDLK_BACKQUOTE:
-				this.on_key_backquote();
+				this.on_keydown_backquote();
 				break;
 			case SDLK_BACKSLASH:
-				this.on_key_backslash();
+				this.on_keydown_backslash();
 				break;
 			case SDLK_CARET:
-				this.on_key_caret();
+				this.on_keydown_caret();
 				break;
 			case SDLK_COMMA:
-				this.on_key_comma();
+				this.on_keydown_comma();
 				break;
 			case SDLK_COLON:
-				this.on_key_colon();
+				this.on_keydown_colon();
 				break;
 			case SDLK_DOLLAR:
-				this.on_key_dollar();
+				this.on_keydown_dollar();
 				break;
 			case SDLK_EQUALS:
-				this.on_key_equals();
+				this.on_keydown_equals();
 				break;
 			case SDLK_EXCLAIM:
-				this.on_key_exclam();
+				this.on_keydown_exclam();
 				break;
 			case SDLK_GREATER:
-				this.on_key_greater();
+				this.on_keydown_greater();
 				break;
 			case SDLK_HASH:
-				this.on_key_hash();
+				this.on_keydown_hash();
 				break;
 			case SDLK_LEFTBRACKET:
-				this.on_key_leftbracket();
+				this.on_keydown_leftbracket();
 				break;
 			case SDLK_LEFTPAREN:
-				this.on_key_leftparen();
+				this.on_keydown_leftparen();
 				break;
 			case SDLK_LESS:
-				this.on_key_less();
+				this.on_keydown_less();
 				break;
 			case SDLK_MINUS:
-				this.on_key_minus();
+				this.on_keydown_minus();
 				break;
 			case SDLK_PERCENT:
-				this.on_key_percent();
+				this.on_keydown_percent();
 				break;
 			case SDLK_PERIOD:
-				this.on_key_period();
+				this.on_keydown_period();
 				break;
 			case SDLK_PLUS:
-				this.on_key_plus();
+				this.on_keydown_plus();
 				break;
 			case SDLK_QUESTION:
-				this.on_key_question();
+				this.on_keydown_question();
 				break;
 			case SDLK_QUOTE:
-				this.on_key_quote();
+				this.on_keydown_quote();
 				break;
 			case SDLK_QUOTEDBL:
-				this.on_key_quotedbl();
+				this.on_keydown_quotedbl();
 				break;
 			case SDLK_RETURN:
-				this.on_key_return();
+				this.on_keydown_return();
 				break;
 			case SDLK_RETURN2:
-				this.on_key_return2();
+				this.on_keydown_return2();
 				break;
 			case SDLK_RIGHTBRACKET:
-				this.on_key_rightbracket();
+				this.on_keydown_rightbracket();
 				break;
 			case SDLK_RIGHTPAREN:
-				this.on_key_rightparen();
+				this.on_keydown_rightparen();
 				break;
 			case SDLK_SEMICOLON:
-				this.on_key_semicolon();
+				this.on_keydown_semicolon();
 				break;
 			case SDLK_SLASH:
-				this.on_key_slash();
+				this.on_keydown_slash();
 				break;
 			case SDLK_SPACE:
-				this.on_key_space();
+				this.on_keydown_space();
 				break;
 			case SDLK_TAB:
-				this.on_key_tab();
+				this.on_keydown_tab();
 				break;
 			case SDLK_UNDERSCORE:
-				this.on_key_underscore();
+				this.on_keydown_underscore();
+				break;
+			default:
+				break;
+		}
+	}
+	
+	void on_symbol_keys_up(int key){
+		switch(key){
+			case SDLK_AMPERSAND:
+				this.on_keyup_ampersand();
+				break;
+			case SDLK_ASTERISK:
+				this.on_keyup_asterisk();
+				break;
+			case SDLK_AT:
+				this.on_keyup_at();
+				break;
+			case SDLK_BACKQUOTE:
+				this.on_keyup_backquote();
+				break;
+			case SDLK_BACKSLASH:
+				this.on_keyup_backslash();
+				break;
+			case SDLK_CARET:
+				this.on_keyup_caret();
+				break;
+			case SDLK_COMMA:
+				this.on_keyup_comma();
+				break;
+			case SDLK_COLON:
+				this.on_keyup_colon();
+				break;
+			case SDLK_DOLLAR:
+				this.on_keyup_dollar();
+				break;
+			case SDLK_EQUALS:
+				this.on_keyup_equals();
+				break;
+			case SDLK_EXCLAIM:
+				this.on_keyup_exclam();
+				break;
+			case SDLK_GREATER:
+				this.on_keyup_greater();
+				break;
+			case SDLK_HASH:
+				this.on_keyup_hash();
+				break;
+			case SDLK_LEFTBRACKET:
+				this.on_keyup_leftbracket();
+				break;
+			case SDLK_LEFTPAREN:
+				this.on_keyup_leftparen();
+				break;
+			case SDLK_LESS:
+				this.on_keyup_less();
+				break;
+			case SDLK_MINUS:
+				this.on_keyup_minus();
+				break;
+			case SDLK_PERCENT:
+				this.on_keyup_percent();
+				break;
+			case SDLK_PERIOD:
+				this.on_keyup_period();
+				break;
+			case SDLK_PLUS:
+				this.on_keyup_plus();
+				break;
+			case SDLK_QUESTION:
+				this.on_keyup_question();
+				break;
+			case SDLK_QUOTE:
+				this.on_keyup_quote();
+				break;
+			case SDLK_QUOTEDBL:
+				this.on_keyup_quotedbl();
+				break;
+			case SDLK_RETURN:
+				this.on_keyup_return();
+				break;
+			case SDLK_RETURN2:
+				this.on_keyup_return2();
+				break;
+			case SDLK_RIGHTBRACKET:
+				this.on_keyup_rightbracket();
+				break;
+			case SDLK_RIGHTPAREN:
+				this.on_keyup_rightparen();
+				break;
+			case SDLK_SEMICOLON:
+				this.on_keyup_semicolon();
+				break;
+			case SDLK_SLASH:
+				this.on_keyup_slash();
+				break;
+			case SDLK_SPACE:
+				this.on_keyup_space();
+				break;
+			case SDLK_TAB:
+				this.on_keyup_tab();
+				break;
+			case SDLK_UNDERSCORE:
+				this.on_keyup_underscore();
 				break;
 			default:
 				break;
