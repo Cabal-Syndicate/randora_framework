@@ -1,7 +1,7 @@
 module randora.engine.box.property.alignment.alignment;
 
 import randora.engine.box.property;
-class RNDAlignment(Master) : RNDOwned!(Master){
+class RNDAlignment : RNDOwned{
 	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.engine.box.property.alignment.events;
 	mixin Print;
@@ -13,7 +13,7 @@ class RNDAlignment(Master) : RNDOwned!(Master){
 	mixin X;
 	mixin Y;
 	
-	this(Master master){
+	this(RNDBoxBase master){
 		super(master);
 		this.type = "RNDAlignment";
 		this.name = "alignment";

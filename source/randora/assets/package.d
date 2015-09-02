@@ -10,7 +10,7 @@ package import randora.assets.sound;
 package import randora.assets.spritesheets;
 package import randora.assets.styles;
 
-//public import randora.engine.owned;
+public import randora.engine.owned;
 
 public import parent_package = randora;
 enum string ASSETS_DIRECTORY = parent_package.RANDORA_DIRECTORY ~ "assets/";

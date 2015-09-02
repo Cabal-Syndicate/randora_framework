@@ -1,7 +1,11 @@
 module randora.engine.box.image.model.margin;
 
 import randora.engine.box.image.model;
-class RNDImageModelMargin(Master) : RNDBoxModelMargin!(Master){
+class RNDImageModelMargin : RNDBoxModelMargin{
+	this(RNDImage master, string directory, string file){
+		super(master);
+	}
+	/+
 	public RNDImageModelBorder!(typeof(this)) border = null;
 	
 	this(Master master, string directory, string file){
@@ -9,4 +13,5 @@ class RNDImageModelMargin(Master) : RNDBoxModelMargin!(Master){
 		this.border = new RNDImageModelBorder!(typeof(this))(this, directory, file);
 		this.add_member(this.border);
 	}
+	+/
 }

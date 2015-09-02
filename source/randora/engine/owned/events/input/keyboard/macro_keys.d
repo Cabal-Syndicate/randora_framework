@@ -1,0 +1,47 @@
+module randora.engine.owned.events.input.keyboard.macro_keys;
+
+mixin template MacroKeys(){
+	import randora.engine.owned.events.input.keyboard.key_event;
+	mixin(KeyEvent!("again"));
+	mixin(KeyEvent!("alterase"));
+	mixin(KeyEvent!("brightnessdown"));
+	mixin(KeyEvent!("brightnessup"));
+	mixin(KeyEvent!("calculator"));
+	mixin(KeyEvent!("cancel"));
+	mixin(KeyEvent!("clear"));
+	mixin(KeyEvent!("clearagain"));
+	mixin(KeyEvent!("computer"));
+	mixin(KeyEvent!("copy"));
+	mixin(KeyEvent!("crsel"));
+	mixin(KeyEvent!("currencysubunit"));
+	mixin(KeyEvent!("currencyunit"));
+	mixin(KeyEvent!("cut"));
+	mixin(KeyEvent!("decimalseparator"));
+	mixin(KeyEvent!("displayswitch"));
+	mixin(KeyEvent!("eject"));
+	mixin(KeyEvent!("execute"));
+	mixin(KeyEvent!("exsel"));
+	mixin(KeyEvent!("find"));
+	mixin(KeyEvent!("help"));
+	mixin(KeyEvent!("mail"));
+	mixin(KeyEvent!("mediaselect"));
+	mixin(KeyEvent!("mode"));
+	mixin(KeyEvent!("mute"));
+	mixin(KeyEvent!("oper"));
+	mixin(KeyEvent!("out"));
+	mixin(KeyEvent!("paste"));
+	mixin(KeyEvent!("pause"));
+	mixin(KeyEvent!("power"));
+	mixin(KeyEvent!("prior"));
+	mixin(KeyEvent!("select"));
+	mixin(KeyEvent!("separator"));
+	mixin(KeyEvent!("sleep"));
+	mixin(KeyEvent!("stop"));
+	mixin(KeyEvent!("sysreq"));
+	mixin(KeyEvent!("thousandsseparator"));
+	mixin(KeyEvent!("undo"));
+	mixin(KeyEvent!("unknown"));
+	mixin(KeyEvent!("volumedown"));
+	mixin(KeyEvent!("volumeup"));
+	mixin(KeyEvent!("www"));
+}

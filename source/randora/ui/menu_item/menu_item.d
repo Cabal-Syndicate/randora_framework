@@ -1,7 +1,11 @@
 module randora.ui.menu_item.menu_item;
 
 import randora.ui.menu_item;
-class UIMenuItem(Master, ObjectType) : RNDContainer!(Master, ObjectType){
+class UIMenuItem : RNDBox{
+	this(RNDBoxBase master){
+		super(master);
+	}
+	/+
 	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.ui.menu_item.events;
 	mixin Clean;
@@ -26,4 +30,5 @@ class UIMenuItem(Master, ObjectType) : RNDContainer!(Master, ObjectType){
 		this.title = title;
 		this(master);
 	}
+	+/
 }

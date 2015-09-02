@@ -1,27 +1,48 @@
 module randora.engine.box.box.box_base;
 
 import randora.engine.box.box;
-class RNDBoxBase(Master) : RNDOwned!(Master){
-	public RNDAlignment!(typeof(this))	alignment	= null;
-	public RNDPoint!(typeof(this))		dimension	= null;
-	public RNDPoint!(typeof(this))		position	= null;
-	public RNDStretch!(typeof(this))	stretch		= null;
-	public float						scale		= 1;
+class RNDBoxBase : RNDOwned{
+	public RNDAlignment	alignment	= null;
+	public RNDPoint		dimension	= null;
+	public RNDPoint		position	= null;
+	public RNDStretch	stretch		= null;
+	public float		scale		= 1;
 	
-	this(Master master){
+	RNDBoxBase[]		boxes		= null;
+	RNDBoxBase			master_box	= null;
+	
+	this(RNDBoxBase master){
 		super(master);
+		this.master_box = master;
+		
 		this.type = "RNDBoxBase";
 		this.name = "box_base";
 		
-		this.dimension		= new RNDPoint!(typeof(this))(this);
-		this.dimension.name	= "dimension";
-		this.add_member(this.dimension);
-		this.position		= new RNDPoint!(typeof(this))(this);
-		this.position.name	= "position";
-		this.add_member(this.position);
-		this.alignment		= new RNDAlignment!(typeof(this))(this);
-		this.add_member(this.alignment);
-		this.stretch		= new RNDStretch!(typeof(this))(this);
-		this.add_member(this.stretch);
+		this.alignment = new RNDAlignment(this);
+		this.add_slave(this.alignment);
+		
+		this.dimension = new RNDPoint(this);
+		this.dimension.name = "dimension";
+		this.add_slave(this.dimension);
+		
+		this.position = new RNDPoint(this);
+		this.position.name = "position";
+		this.add_slave(this.position);
+		
+		this.stretch = new RNDStretch(this);
+		this.add_slave(this.stretch);
+	}
+	
+	void add_box(RNDBoxBase box){
+		this.boxes ~= box;
+	}
+	
+	RNDBoxBase grandmaster_box(){
+		if(this.master_box !is null){
+			if(this.master_box.master_box !is null){
+				return this.master_box.master_box;
+			}
+		}
+		return null;
 	}
 }

@@ -2,6 +2,7 @@ module randora.engine.resource.resource.resource;
 
 import randora.engine.resource.resource;
 mixin template RNDResource(){
+	/+
 	void resource_init(string directory, string file){
 		this.directory = directory;
 		this.file = file;
@@ -28,4 +29,5 @@ mixin template RNDResource(){
 			return _p;
 		}
 	}
+	+/
 }

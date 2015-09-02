@@ -2,6 +2,7 @@ module randora.engine.resource.base_texture.events.load;
 
 import randora.engine.resource.base_texture.events;
 mixin template Load(){
+	/+
 	override void post_load(){
 		super.post_load();
 		
@@ -20,4 +21,5 @@ mixin template Load(){
 		SDL_FreeSurface(this.sdl_surface);
 		this.sdl_surface = null;
 	}
+	+/
 }

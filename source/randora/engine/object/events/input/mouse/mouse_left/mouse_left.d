@@ -1,10 +1,11 @@
 module randora.engine.object.events.input.mouse.mouse_left.mouse_left;
 
 mixin template MouseLeft(){
-	mixin LeftClick;
-	mixin LeftDoubleclick;
-	mixin LeftTripleclick;
-	mixin LeftMulticlick;
+	import randora.engine.object.events.input.mouse.mouse_event;
+	mixin(MouseEvent!("left_click"));
+	mixin(MouseEvent!("left_doubleclick"));
+	mixin(MouseEvent!("left_tripleclick"));
+	mixin(MouseEvent!("left_multiclick"));
 	
 	void mouseleft_down(){
 		switch(this.sdl_event.button.clicks){

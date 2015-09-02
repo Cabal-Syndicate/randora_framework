@@ -1,4 +1,4 @@
-module randora.sd.image.events.start;
+module randora.sdl.image.events.start;
 
 mixin template Start(){
 	override void on_start(){

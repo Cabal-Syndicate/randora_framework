@@ -1,7 +1,11 @@
 module randora.engine.widget.widget;
 
 import randora.engine.widget;
-class RNDWidget(Master) : RNDBox!(Master){
+class RNDWidget : RNDBox{
+	this(RNDBoxBase master){
+		super(master);
+	}
+	/+
 	/+++Properties+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.engine.widget.properties;
 	mixin ZIndex;	//public ulong	z_index
@@ -13,4 +17,5 @@ class RNDWidget(Master) : RNDBox!(Master){
 		//this.events = new RNDEvents!(typeof(this))(this);
 		//this.add_member(this.events);
 	}
+	+/
 }

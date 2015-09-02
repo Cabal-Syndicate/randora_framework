@@ -1,12 +1,12 @@
 module randora.sdl.mixer.mixer;
 
 package import randora.sdl.mixer;
-class SDLMixer(Master) : RNDOwned!(Master){
+class SDLMixer : RNDOwned{
 	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.sdl.mixer.events;
 	mixin Start;
 	
-	this(Master master){
+	this(SDLSDL master){
 		super(master);
 	}
 	

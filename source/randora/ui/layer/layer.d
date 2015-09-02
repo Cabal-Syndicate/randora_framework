@@ -1,8 +1,8 @@
 module randora.ui.layer.layer;
 
 import randora.ui.layer;
-class UILayer(Master, ObjectType) : RNDContainer!(Master, ObjectType){
-	this(Master master){
+class UILayer : RNDBox{
+	this(RNDBoxBase master){
 		super(master);
 	}
 }

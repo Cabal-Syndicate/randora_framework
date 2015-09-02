@@ -1,12 +1,12 @@
 module randora.sdl.image.image;
 
 package import randora.sdl.image;
-class SDLImage(Master) : RNDOwned!(Master){
+class SDLImage : RNDOwned{
 	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.sdl.image.events;
 	mixin Start;
 	
-	this(Master master){
+	this(SDLSDL master){
 		super(master);
 	}
 }

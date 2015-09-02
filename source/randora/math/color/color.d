@@ -1,7 +1,11 @@
 module randora.math.color.color;
 
 import randora.math.color;
-class RNDColor(Master) : RNDOwned!(Master){
+class RNDColor : RNDOwned{
+	this(RNDBoxBase master){
+		super(master);
+	}
+	/+
 	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.math.color.events;
 	mixin Draw;
@@ -21,4 +25,5 @@ class RNDColor(Master) : RNDOwned!(Master){
 		this.type = "RNDColor";
 		this.name = "color";
 	}
+	+/
 }

@@ -1,7 +1,5 @@
 module scaffolds.aero.images.background;
 
-package import scaffolds.aero.images.background.background;
-
 public import scaffolds.aero.images;
 public import parent_package = scaffolds.aero.images;
 

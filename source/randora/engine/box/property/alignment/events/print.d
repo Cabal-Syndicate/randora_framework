@@ -1,6 +1,7 @@
 module randora.engine.box.property.alignment.events.print;
 
 mixin template Print(){
+	/+
 	override string on_print(int level = 0){
 		import std.conv;
 		string s;
@@ -18,4 +19,5 @@ mixin template Print(){
 		s ~= super.on_print(level);
 		return s;
 	}
+	+/
 }

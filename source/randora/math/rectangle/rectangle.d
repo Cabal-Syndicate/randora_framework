@@ -1,7 +1,8 @@
 module randora.math.rectangle.rectangle;
 
 import randora.math.rectangle;
-class RNDRectangle(Master) : RNDOwned!(Master){
+class RNDRectangle : RNDOwned{
+	/+
 	/+++Properties+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.math.rectangle.properties;
 	mixin Dimension;
@@ -12,4 +13,5 @@ class RNDRectangle(Master) : RNDOwned!(Master){
 		this.position	= new RNDPoint(x0, y0);
 		this.dimension	= new RNDPoint(x1, y1);
 	}
+	+/
 }

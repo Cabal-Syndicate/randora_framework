@@ -1,7 +1,7 @@
 module randora.sdl.renderer.renderer;
 
 import randora.sdl.renderer;
-class SDLRenderer(Master) : RNDOwned!(Master){
+class SDLRenderer : RNDOwned{
 	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.sdl.renderer.events;
 	mixin Clear;
@@ -15,7 +15,7 @@ class SDLRenderer(Master) : RNDOwned!(Master){
 	mixin Index;
 	mixin SDLRenderer;
 	
-	this(Master master){
+	this(SDLWindow master){
 		super(master);
 		
 		//this.flags |= SDL_RENDERER_SOFTWARE;		//the renderer is a software fallback

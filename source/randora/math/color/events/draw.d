@@ -1,6 +1,7 @@
 module randora.math.color.events.draw;
 
 mixin template Draw(){
+	/+
 	override void on_draw(){
 		super.on_draw();
 		SDL_SetRenderDrawColor(
@@ -11,4 +12,5 @@ mixin template Draw(){
 			this.alpha
 		);
 	}
+	+/
 }

@@ -3,8 +3,8 @@ module randora.engine.object.events.input.input;
 import randora.engine.object.events.input;
 mixin template Input(){
 	/+++Input Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
-	//import randora.engine.object.events.input.keyboard;
-	//mixin Keyboard;
+	import randora.engine.object.events.input.keyboard;
+	mixin Keyboard;
 	import randora.engine.object.events.input.mouse;
 	mixin Mouse;
 	
@@ -58,7 +58,7 @@ mixin template Input(){
 	protected void on_input(){
 		while(SDL_PollEvent(&this.sdl_event) != 0){
 			int etype = this.event_type;
-			//this.on_keyboard(etype);
+			this.on_keyboard(etype);
 			this.on_mouse(etype);
 			/+
 			switch(etype){

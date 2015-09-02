@@ -2,6 +2,7 @@ module randora.engine.resource.base_texture.events.draw;
 
 import randora.engine.resource.base_texture.events;
 mixin template Draw(){
+	/+
 	override void on_draw(){
 		super.on_draw();
 		
@@ -19,4 +20,5 @@ mixin template Draw(){
 			&tmp_render_quad
 		);
 	}
+	+/
 }

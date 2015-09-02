@@ -1,6 +1,7 @@
 module randora.engine.resource.base_texture.properties.blending;
 
 mixin template Blending(){
+	/+
 	@property{
 		private SDL_BlendMode _blending = 0;
 		public ref SDL_BlendMode blending(){ return this._blending; }
@@ -9,4 +10,5 @@ mixin template Blending(){
 			return this._blending;
 		}
 	}
+	+/
 }

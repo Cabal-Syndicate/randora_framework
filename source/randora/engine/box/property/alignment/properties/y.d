@@ -46,19 +46,25 @@ mixin template Y(){
 	
 	public void bottom(){
 		if(this.grandmaster !is null){
-			this.master.position.y = this.grandmaster.contents.dy + this.grandmaster.contents.py - this.master.dimension.y;
+			RNDBoxBase m = cast(RNDBoxBase)(this.master);
+			RNDBox gm = cast(RNDBox)(m.master_box);
+			m.position.y = gm.contents.dimension.y + gm.contents.position.y - m.dimension.y;
 		}
 	}
 	
 	public void center_y(){
 		if(this.grandmaster !is null){
-			this.master.position.y = this.grandmaster.contents.dy / 2 - this.master.dimension.y / 2;
+			RNDBoxBase m = cast(RNDBoxBase)(this.master);
+			RNDBox gm = cast(RNDBox)(m.master_box);
+			m.position.y = gm.contents.dimension.y / 2 - gm.dimension.y / 2;
 		}
 	}
 	
 	public void top(){
 		if(this.grandmaster !is null){
-			this.master.position.y = this.grandmaster.contents.py;
+			RNDBoxBase m = cast(RNDBoxBase)(this.master);
+			RNDBox gm = cast(RNDBox)(m.master_box);
+			m.position.y = gm.contents.position.y;
 		}
 	}
 	

@@ -1,10 +1,11 @@
 module randora.engine.object.events.input.mouse.mouse_right.mouse_right;
 
 mixin template MouseRight(){
-	mixin RightClick;
-	mixin RightDoubleclick;
-	mixin RightTripleclick;
-	mixin RightMulticlick;
+	import randora.engine.object.events.input.mouse.mouse_event;
+	mixin(MouseEvent!("right_click"));
+	mixin(MouseEvent!("right_doubleclick"));
+	mixin(MouseEvent!("right_tripleclick"));
+	mixin(MouseEvent!("right_multiclick"));
 	
 	void mouseright_down(){
 		switch(this.sdl_event.button.clicks){

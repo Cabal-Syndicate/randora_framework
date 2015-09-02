@@ -1,7 +1,24 @@
 module randora.engine.box.box.model.contents;
 
 import randora.engine.box.box.model;
-class RNDBoxModelContents(Master) : RNDBoxModelBase!(Master){
+class RNDBoxModelContents : RNDBoxModelBase{
+	import randora.engine.box.box.model.padding;
+	this(RNDBoxModelPadding master){
+		super(master);
+		this.type = "RNDContents";
+		this.name = "contents";
+	}
+	
+	@property{
+		/+
+		int dx(){ return this.master.dx - (this.master.spacing * 2); }
+		int dy(){ return this.master.dy - (this.master.spacing * 2); }
+		int px(){ return this.master.px + this.master.spacing; }
+		int py(){ return this.master.py + this.master.spacing; }
+		+/
+	}
+	
+	/+
 	this(Master master){
 		super(master);
 		this.type = "RNDContents";
@@ -25,4 +42,5 @@ class RNDBoxModelContents(Master) : RNDBoxModelBase!(Master){
 		
 		super.on_draw();
 	}
+	+/
 }

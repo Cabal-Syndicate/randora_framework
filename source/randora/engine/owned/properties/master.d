@@ -1,6 +1,7 @@
 module randora.engine.owned.properties.master;
 
 mixin template PropertyMaster(){
+	/+
 	public Master	master	= null;
 	
 	@property{
@@ -12,4 +13,5 @@ mixin template PropertyMaster(){
 			}
 		}
 	}
+	+/
 }

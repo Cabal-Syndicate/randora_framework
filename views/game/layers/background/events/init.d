@@ -1,6 +1,7 @@
 module game.layers.background.events.init;
 
 mixin template Init(){
+	/+
 	override void on_init(){
 		this.background.contents.color.red		= 0x41;
 		this.background.contents.color.green	= 0x69;
@@ -22,4 +23,5 @@ mixin template Init(){
 		
 		super.on_init();
 	}
+	+/
 }

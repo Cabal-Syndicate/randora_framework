@@ -1,8 +1,14 @@
 module randora.engine.object.events.input.mouse.mouse;
 
 mixin template Mouse(){
-	/+++Key Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
-	import randora.engine.object.events.input.mouse;
+	/+++Mouse Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
+	import randora.engine.object.events.input.mouse.mouse_left;
+	import randora.engine.object.events.input.mouse.mouse_middle;
+	import randora.engine.object.events.input.mouse.mouse_right;
+	import randora.engine.object.events.input.mouse.mouse_x1;
+	import randora.engine.object.events.input.mouse.mouse_x2;
+	import randora.engine.object.events.input.mouse.mouse_wheel;
+	
 	mixin MouseLeft;
 	mixin MouseMiddle;
 	mixin MouseRight;
@@ -29,6 +35,9 @@ mixin template Mouse(){
 				break;
 			case SDL_MOUSEBUTTONDOWN:
 				if(SDL_GetMouseState(null, null) & SDL_BUTTON(SDL_BUTTON_LEFT)){
+					import std.stdio; "".writeln;
+					this.sdl_event.button.x.writeln;
+					this.sdl_event.button.y.writeln;
 					this.mouseleft_down();
 				}
 				

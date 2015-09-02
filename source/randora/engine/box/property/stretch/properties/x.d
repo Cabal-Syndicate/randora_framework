@@ -31,13 +31,17 @@ mixin template X(){
 	
 	public void fraction_x(float fraction = 1){
 		if(this.grandmaster !is null){
-			this.master.dimension.x = cast(int)((this.grandmaster.contents.dx * fraction) * this.master.scale);
+			RNDBoxBase m = cast(RNDBoxBase)(this.master);
+			RNDBox gm = cast(RNDBox)(m.master_box);
+			m.dimension.x = cast(int)((gm.contents.dimension.x * fraction) * m.scale);
 		}
 	}
 	
 	public void none_x(){
 		if(this.grandmaster !is null){
-			this.master.dimension.x = cast(int)(this.master.dimension.x * this.master.scale);
+			RNDBoxBase m = cast(RNDBoxBase)(this.master);
+			RNDBox gm = cast(RNDBox)(m.master_box);
+			m.dimension.x = cast(int)(m.dimension.x * m.scale);
 		}
 	}
 }

@@ -1,9 +1,8 @@
 module randora.ui.button.button;
 
 import randora.ui.button;
-class UIButton(Master, ObjectType) : RNDContainer!(Master, ObjectType){
-	this(Master master){
-		this.type = "button";
+class UIButton : RNDBox{
+	this(RNDBoxBase master){
 		super(master);
 	}
 }

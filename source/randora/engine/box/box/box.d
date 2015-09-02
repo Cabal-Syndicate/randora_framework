@@ -1,8 +1,9 @@
 module randora.engine.box.box.box;
 
 import randora.engine.box.box;
-class RNDBox(Master) : RNDBoxBase!(Master){
-	public RNDBoxModelMargin!(typeof(this)) margin = null;
+class RNDBox : RNDBoxBase{
+	/+++Properties+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
+	public RNDBoxModelMargin margin = null;
 	
 	@property{
 		public auto	border(){ return this.margin.border; }
@@ -10,12 +11,12 @@ class RNDBox(Master) : RNDBoxBase!(Master){
 		public auto	contents(){ return this.margin.border.padding.contents; }
 	}
 	
-	this(Master master){
+	this(RNDBoxBase master){
 		super(master);
 		this.type = "RNDBox";
 		this.name = "box";
 		
-		this.margin = new RNDBoxModelMargin!(typeof(this))(this);
-		this.add_member(this.margin);
+		this.margin = new RNDBoxModelMargin(this);
+		this.add_box(this.margin);
 	}
 }

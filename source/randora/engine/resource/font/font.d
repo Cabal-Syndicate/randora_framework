@@ -1,7 +1,11 @@
 module randora.engine.resource.font.font;
 
 import randora.engine.resource;
-class RNDFont(Master) : RNDBaseTexture!(Master){
+class RNDFont : RNDBaseTexture{
+	this(RNDBoxBase master){
+		super(master);
+	}
+	/+
 	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.engine.resource.font.events;
 	mixin Init;
@@ -22,4 +26,5 @@ class RNDFont(Master) : RNDBaseTexture!(Master){
 		SDL_DestroyTexture(this.sdl_texture);
 		this.sdl_texture = null;
 	}
+	+/
 }
