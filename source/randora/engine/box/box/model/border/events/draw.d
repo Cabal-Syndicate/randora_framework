@@ -1,6 +1,7 @@
 module randora.engine.box.box.model.border.events.draw;
 
 mixin template Draw(){
+	/+
 	override void on_draw(){
 		if(this.spacing >= 0){
 			//Cache these variables because calculating them multiple times every loop is already expensive enough
@@ -76,4 +77,5 @@ mixin template Draw(){
 			super.on_draw();
 		}
 	}
+	+/
 }

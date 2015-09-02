@@ -1,5 +1,5 @@
 module randora.engine.app.properties.quit;
 
 mixin template PropertyQuit(){
-	public bool	quit	= false;
+	public bool quit = false;
 }

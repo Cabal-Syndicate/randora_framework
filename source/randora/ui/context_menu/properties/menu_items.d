@@ -1,6 +1,7 @@
 module randora.ui.context_menu.properties.menu_items;
 
 mixin template MenuItems(){
+	/+
 	private UIMenuItem!(Master, ObjectType)[] _menu_items = null;
 	
 	@property{
@@ -14,4 +15,5 @@ mixin template MenuItems(){
 		//item.z_index = this.menu_items.length;
 		//this.menu_items ~= item;
 	}
+	+/
 }

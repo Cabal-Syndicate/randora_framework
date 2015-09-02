@@ -2,6 +2,7 @@ module randora.ui.context_menu.events.init;
 
 import randora.ui.context_menu.events;
 mixin template Init(){
+	/+
 	override void on_init(){
 		this.background.init();
 		this.background.stretch.x	= this.background.stretch.STRETCH.EXPAND;
@@ -33,4 +34,5 @@ mixin template Init(){
 			menu_item.init();
 		}
 	}
+	+/
 }

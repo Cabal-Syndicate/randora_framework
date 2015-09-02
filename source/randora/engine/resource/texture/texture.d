@@ -1,7 +1,11 @@
 module randora.engine.resource.texture.texture;
 
 import randora.engine.resource;
-class RNDTexture(Master) : RNDBaseTexture!(Master){
+class RNDTexture : RNDBaseTexture{
+	this(RNDBoxBase master){
+		super(master);
+	}
+	/+
 	this(Master master, string directory, string file){
 		super(master, directory, file);
 	}
@@ -16,4 +20,5 @@ class RNDTexture(Master) : RNDBaseTexture!(Master){
 		this.sdl_surface = IMG_Load(this.const_char_path);
 		assert(this.sdl_surface != null);
 	}
+	+/
 }

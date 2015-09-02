@@ -1,6 +1,7 @@
 module randora.engine.resource.font.events.load;
 
 mixin template Load(){
+	/+
 	override void on_load(){
 		super.on_load();
 		
@@ -22,4 +23,5 @@ mixin template Load(){
 		this.master.dimension.y = cast(int)(this.size);
 		this.master.margin.spacing = 0;
 	}
+	+/
 }

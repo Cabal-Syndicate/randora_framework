@@ -1,7 +1,8 @@
 module randora.engine.resource.music.music;
 
 import randora.engine.resource;
-class RNDMusic(Master) : RNDOwned!(Master){
+class RNDMusic : RNDOwned{
+	/+
 	mixin RNDResource resource;
 	
 	this(Master master, string directory, string file){
@@ -33,4 +34,5 @@ class RNDMusic(Master) : RNDOwned!(Master){
 			}
 		}
 	}
+	+/
 }

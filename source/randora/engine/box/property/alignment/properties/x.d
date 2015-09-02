@@ -46,19 +46,25 @@ mixin template X(){
 	
 	public void center_x(){
 		if(this.grandmaster !is null){
-			this.master.position.x = this.grandmaster.contents.dx / 2 - this.master.dimension.x / 2;
+			RNDBoxBase m = cast(RNDBoxBase)(this.master);
+			RNDBox gm = cast(RNDBox)(m.master_box);
+			m.position.x = gm.contents.dimension.x / 2 - m.dimension.x / 2;
 		}
 	}
 	
 	public void left(){
 		if(this.grandmaster !is null){
-			this.master.position.x = this.grandmaster.contents.px;
+			RNDBoxBase m = cast(RNDBoxBase)(this.master);
+			RNDBox gm = cast(RNDBox)(m.master_box);
+			m.position.x = 	gm.contents.position.x;
 		}
 	}
 	
 	public void right(){
 		if(this.grandmaster !is null){
-			this.master.position.x = this.grandmaster.contents.dx + this.grandmaster.contents.px - this.master.dimension.x;
+			RNDBoxBase m = cast(RNDBoxBase)(this.master);
+			RNDBox gm = cast(RNDBox)(m.master_box);
+			m.position.x = gm.contents.dimension.x + gm.contents.position.x - m.dimension.x;
 		}
 	}
 	

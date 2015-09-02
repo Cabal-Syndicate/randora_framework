@@ -1,10 +1,11 @@
 module randora.engine.object.events.input.mouse.mouse_middle.mouse_middle;
 
 mixin template MouseMiddle(){
-	mixin MiddleClick;
-	mixin MiddleDoubleclick;
-	mixin MiddleTripleclick;
-	mixin MiddleMulticlick;
+	import randora.engine.object.events.input.mouse.mouse_event;
+	mixin(MouseEvent!("middle_click"));
+	mixin(MouseEvent!("middle_doubleclick"));
+	mixin(MouseEvent!("middle_tripleclick"));
+	mixin(MouseEvent!("middle_multiclick"));
 	
 	void mousemiddle_down(){
 		switch(this.sdl_event.button.clicks){

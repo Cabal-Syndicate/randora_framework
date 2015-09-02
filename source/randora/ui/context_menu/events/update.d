@@ -2,6 +2,7 @@ module randora.ui.context_menu.events.update;
 
 import randora.ui.context_menu.events;
 mixin template Update(){
+	/+
 	override void on_update(){
 		super.on_update();
 		if(this.menu_items !is null){
@@ -11,4 +12,5 @@ mixin template Update(){
 		}
 		this.background.update();
 	}
+	+/
 }

@@ -1,6 +1,7 @@
 module randora.engine.owned.properties.app;
 
 mixin template PropertyApp(){
+	/+
 	@property{
 		//TODO: Fix this so it doesn't rely on importing from game.app
 		import game.apps;
@@ -8,4 +9,5 @@ mixin template PropertyApp(){
 			return this.master.app;
 		}
 	}
+	+/
 }

@@ -1,7 +1,18 @@
 module randora.engine.box.box.model.margin;
 
 import randora.engine.box.box.model;
-class RNDBoxModelMargin(Master) : RNDBoxModelBase!(Master){
+class RNDBoxModelMargin : RNDBoxModelBase{
+	public RNDBoxModelBorder border = null;
+	
+	this(RNDBox master){
+		super(master);
+		this.type = "RNDMargin";
+		this.name = "margin";
+		this.border = new RNDBoxModelBorder(this);
+		//this.add_slave(this.border);
+		this.add_box(this.border);
+	}
+	/+
 	public RNDBoxModelBorder!(typeof(this)) border = null;
 	
 	this(Master master){
@@ -29,6 +40,7 @@ class RNDBoxModelMargin(Master) : RNDBoxModelBase!(Master){
 		
 		super.on_draw();
 	}
+	+/
 }
 
 

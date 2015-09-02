@@ -1,8 +1,8 @@
 module randora.ui.window.window;
 
 import randora.ui.window;
-class UIWindow(Master, ObjectType) : SDLWindow!(Master, ObjectType){
-	this(Master master, int position_x = 100, int position_y = 100, int dimension_x = 640, int dimension_y = 480){
+class UIWindow : SDLWindow{
+	this(RNDBoxBase master, int position_x = 100, int position_y = 100, int dimension_x = 640, int dimension_y = 480){
 		super(master);
 		this.name = "uiwindow";
 		this.type = "UIWindow";

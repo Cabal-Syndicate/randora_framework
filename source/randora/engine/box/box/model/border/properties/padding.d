@@ -1,5 +1,6 @@
 module randora.engine.box.box.model.border.properties.padding;
 
 mixin template Padding(){
-	public RNDBoxModelPadding!(typeof(this))	padding	= null;
+	import randora.engine.box.box.model.padding;
+	public RNDBoxModelPadding padding = null;
 }

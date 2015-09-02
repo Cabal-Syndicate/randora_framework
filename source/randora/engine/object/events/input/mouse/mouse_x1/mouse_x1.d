@@ -1,10 +1,11 @@
 module randora.engine.object.events.input.mouse.mouse_x1.mouse_x1;
 
 mixin template MouseX1(){
-	mixin X1Click;
-	mixin X1Doubleclick;
-	mixin X1Tripleclick;
-	mixin X1Multiclick;
+	import randora.engine.object.events.input.mouse.mouse_event;
+	mixin(MouseEvent!("x1_click"));
+	mixin(MouseEvent!("x1_doubleclick"));
+	mixin(MouseEvent!("x1_tripleclick"));
+	mixin(MouseEvent!("x1_multiclick"));
 	
 	void mousex1_down(){
 		switch(this.sdl_event.button.clicks){

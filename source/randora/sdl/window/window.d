@@ -1,7 +1,7 @@
 module randora.sdl.window.window;
 
 import randora.sdl.window;
-class SDLWindow(Master, WindowType) : RNDContainer!(Master, WindowType){
+class SDLWindow : RNDBox{
 	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.sdl.window.events;
 	mixin Clean;
@@ -21,12 +21,13 @@ class SDLWindow(Master, WindowType) : RNDContainer!(Master, WindowType){
 	
 	alias sdl_window this;
 	
-	this(Master master){
+	this(RNDBoxBase master){
 		super(master);
+		
 		this.name = "sdl_window";
 		this.type = "SDLWindow";
 		
-		this.renderer = new SDLRenderer!(typeof(this))(this);
+		this.renderer = new SDLRenderer(this);
 		assert(this.renderer !is null);
 		
 		this.flags |= SDL_WINDOW_ALLOW_HIGHDPI;

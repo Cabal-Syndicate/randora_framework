@@ -1,6 +1,7 @@
 module randora.engine.box.image.model.contents.events.load;
 
 mixin template Load(){
+	/+
 	override void post_load(){
 		super.post_load();
 		int mmmmdx = this.image.width;
@@ -17,4 +18,5 @@ mixin template Load(){
 		mmmmdy += (this.master.master.master.spacing * 2);
 		this.master.master.master.master.dimension.y = mmmmdy;
 	}
+	+/
 }

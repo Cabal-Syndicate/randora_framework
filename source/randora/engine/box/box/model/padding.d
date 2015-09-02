@@ -1,7 +1,19 @@
 module randora.engine.box.box.model.padding;
 
 import randora.engine.box.box.model;
-class RNDBoxModelPadding(Master) : RNDBoxModelBase!(Master){
+class RNDBoxModelPadding : RNDBoxModelBase{
+	public RNDBoxModelContents contents = null;
+	
+	import randora.engine.box.box.model.border.border;
+	this(RNDBoxModelBorder master){
+		super(master);
+		this.type = "RNDPadding";
+		this.name = "padding";
+		this.contents = new RNDBoxModelContents(this);
+		//this.add_slave(this.contents);
+		this.add_box(this.contents);
+	}
+	/+
 	public RNDBoxModelContents!(typeof(this)) contents = null;
 	
 	this(Master master){
@@ -18,4 +30,5 @@ class RNDBoxModelPadding(Master) : RNDBoxModelBase!(Master){
 		override int px(){ return this.master.px + this.master.spacing; }
 		override int py(){ return this.master.py + this.master.spacing; }
 	}
+	+/
 }

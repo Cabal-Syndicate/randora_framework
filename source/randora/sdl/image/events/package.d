@@ -1,3 +1,5 @@
 module randora.sdl.image.events;
 
-package import randora.sd.image.events.start;
+package import randora.sdl.image.events.start;
+
+package import randora.sdl;

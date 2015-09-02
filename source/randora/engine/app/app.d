@@ -1,7 +1,7 @@
 module randora.engine.app.app;
 
 import randora.engine.app;
-class RNDApp(Master, AppType) : RNDContainer!(Master, AppType){
+class RNDApp : RNDContainer{
 	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.engine.app.events;
 	mixin Init;
@@ -13,16 +13,18 @@ class RNDApp(Master, AppType) : RNDContainer!(Master, AppType){
 	mixin PropertyQuit;
 	mixin PropertySDL;
 	
-	this(Master master = null){
-		super(master);
+	this(){
+		super();
 		
 		this.type = "BaseApp";
 		this.name = "base_app";
 		
-		this.sdl = new SDLSDL!(typeof(this))(this);
+		this.sdl = new SDLSDL(this);
 		assert(this.sdl !is null);
+		this.add_slave(this.sdl);
 	}
 	
+	//TODO: Refactor this to on_loop() event
 	void game_loop(){
 		while(!quit){
 			this.event();
@@ -41,14 +43,12 @@ class RNDApp(Master, AppType) : RNDContainer!(Master, AppType){
 	
 	override void on_event(){
 		super.on_event();
-		
+		//TODO: Refactor this to on_quit() event
 		if(this.event_quit){
 			this.quit = true;
 		}
 		
+		//TODO: Refactor this into on_loop() event
 		this.input();
-		//while(SDL_PollEvent(&this.sdl_event) != 0){
-		//	this.input(this.sdl_event.key.keysym.sym);
-		//}
 	}
 }

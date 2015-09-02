@@ -1,6 +1,7 @@
 module randora.engine.resource.base_texture.properties.color;
 
 mixin template Color(){
+	/+
 	@property{
 		private RNDColor!(typeof(this)) _color = null;
 		public ref RNDColor!(typeof(this)) color(){ return this._color; }
@@ -18,4 +19,5 @@ mixin template Color(){
 			);
 		}
 	}
+	+/
 }

@@ -1,7 +1,21 @@
 module randora.engine.box.image.image;
 
 import randora.engine.box.image;
-class RNDImage(Master) : RNDBoxBase!(Master){
+class RNDImage : RNDBox{
+	public RNDImageModelMargin margin = null;
+	
+	this(RNDBoxBase master, string directory, string file){
+		super(master);
+		this.type = "RNDImage";
+		this.name = "image";
+		
+		this.margin = new RNDImageModelMargin(this, directory, file);
+		this.add_slave(this.margin);
+		
+		//this.stretch.x = this.stretch.STRETCH.NONE;
+		//this.stretch.y = this.stretch.STRETCH.NONE;
+	}
+	/+
 	public RNDImageModelMargin!(typeof(this)) margin = null;
 	
 	@property{
@@ -22,4 +36,5 @@ class RNDImage(Master) : RNDBoxBase!(Master){
 		this.stretch.x = this.stretch.STRETCH.NONE;
 		this.stretch.y = this.stretch.STRETCH.NONE;
 	}
+	+/
 }

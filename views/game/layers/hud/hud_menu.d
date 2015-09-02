@@ -1,7 +1,11 @@
 module game.layers.hud.hud_menu;
 
 import game.layers.hud;
-class HUDMenu(Master) : UIContextMenu!(Master, HUDMenu){
+class HUDMenu : UIContextMenu{
+	this(RNDBoxBase master){
+		super(master);
+	}
+	/+
 	this(Master master){
 		super(master);
 		this.type = "HUDMenu";
@@ -16,7 +20,15 @@ class HUDMenu(Master) : UIContextMenu!(Master, HUDMenu){
 		this.alignment.y	= this.background.alignment.ALIGNMENT.BOTTOM;
 		super.on_init();
 	}
-	/+
+	
+	override void on_mouseleft_doubleclick(){
+		super.on_mouseleft_doubleclick();
+		//if(this.position.x < )
+		import std.stdio;
+		this.sdl_event.button.x.writeln;
+		this.sdl_event.button.y.writeln;
+	}
+	
 	override void on_keyup_up(){
 		super.on_keyup_up();
 		this.alignment.y = this.background.alignment.ALIGNMENT.TOP;
@@ -26,7 +38,7 @@ class HUDMenu(Master) : UIContextMenu!(Master, HUDMenu){
 		super.on_keyup_down();
 		this.alignment.y = this.background.alignment.ALIGNMENT.BOTTOM;
 	}
-	+/
+	
 	
 	override void on_mousewheel_up(){
 		super.on_mousewheel_up();
@@ -37,5 +49,6 @@ class HUDMenu(Master) : UIContextMenu!(Master, HUDMenu){
 		super.on_mousewheel_down();
 		this.alignment.y = this.background.alignment.ALIGNMENT.BOTTOM;
 	}
+	+/
 }
 

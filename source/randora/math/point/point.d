@@ -1,7 +1,7 @@
 module randora.math.point.point;
 
 import randora.math.point;
-class RNDPoint(Master) : RNDOwned!(Master){
+class RNDPoint : RNDOwned{
 	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.math.point.events;
 	mixin Print;
@@ -12,7 +12,7 @@ class RNDPoint(Master) : RNDOwned!(Master){
 	mixin Y;
 	mixin Z;
 	
-	this(Master master, int ix = 0, int iy = 0, int iz = 0){
+	this(RNDBoxBase master, int ix = 0, int iy = 0, int iz = 0){
 		super(master);
 		this.type = "RNDPoint";
 		this.name = "point";

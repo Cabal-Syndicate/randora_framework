@@ -2,6 +2,7 @@ module randora.ui.context_menu.events.load;
 
 import randora.ui.context_menu.events;
 mixin template Load(){
+	/+
 	override void on_load(){
 		super.on_load();
 		this.background.load();
@@ -20,4 +21,5 @@ mixin template Load(){
 		}
 		this.iterator = 0;
 	}
+	+/
 }
