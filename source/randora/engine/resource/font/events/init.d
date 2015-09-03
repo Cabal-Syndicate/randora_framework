@@ -1,7 +1,6 @@
 module randora.engine.resource.font.events.init;
 
 mixin template Init(){
-	/+
 	override void on_init(){
 		super.on_init();
 		
@@ -15,5 +14,4 @@ mixin template Init(){
 		this.color_key.blue		= 0x00;
 		this.color_key.active	= true;
 	}
-	+/
 }

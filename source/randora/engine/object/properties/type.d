@@ -1,5 +1,5 @@
 module randora.engine.object.properties.type;
 
-mixin template PropertyType(){
+mixin template Type(){
 	string type = "";
 }

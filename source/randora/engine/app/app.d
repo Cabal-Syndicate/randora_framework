@@ -24,6 +24,13 @@ class RNDApp : RNDContainer{
 		this.add_slave(this.sdl);
 	}
 	
+	//alias application this;
+	
+	@property{
+		public override RNDObject application(){ return this; }
+		//public override RNDWindow window(){ return this.master.window(); }
+	}
+	
 	//TODO: Refactor this to on_loop() event
 	void game_loop(){
 		while(!quit){

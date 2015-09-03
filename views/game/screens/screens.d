@@ -2,13 +2,9 @@ module game.screens.screens;
 
 import game.screens;
 class Screens : UIScreen{
-	this(RNDBoxBase master){
-		super(master);
-	}
-	/+
-	Battlefield!(typeof(this)) battlefield = null;
+	Battlefield battlefield = null;
 	
-	this(Master master){
+	this(RNDBoxBase master){
 		super(master);
 		this.type = "Screens";
 		this.name = "screens";
@@ -16,8 +12,7 @@ class Screens : UIScreen{
 		//this.start_screen = new StartScreen!(typeof(this))(this);
 		//this.add_slave(this.start_screen);
 		
-		this.battlefield = new Battlefield!(typeof(this))(this);
-		this.add_slave(this.battlefield);
+		this.battlefield = new Battlefield(this);
+		this.add_box(this.battlefield);
 	}
-	+/
 }

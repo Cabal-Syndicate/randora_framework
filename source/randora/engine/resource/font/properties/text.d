@@ -1,7 +1,6 @@
 module randora.engine.resource.font.properties.text;
 
 mixin template Text(){
-	/+
 	@property{
 		private string _text = "";
 		public ref string text(){ return this._text; }
@@ -11,5 +10,4 @@ mixin template Text(){
 			return _t;
 		}
 	}
-	+/
 }

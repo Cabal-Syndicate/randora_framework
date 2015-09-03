@@ -7,36 +7,18 @@ class MainWindow : UIWindow{
 	
 	/+++Properties+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import game.windows.main_window.properties;
-	//mixin PropertyScreens;
+	mixin PropertyScreens;
 	
 	this(RNDBoxBase master){
 		super(master);
 		this.name = "Main Window";
 		this.type = "MainWindow";
 		
-		//this.screens = new Screens(this);
-		//this.add_slave(this.screens);
+		this.screens = new Screens(this);
+		this.add_box(this.screens);
 	}
-	/+
-	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
-	import game.windows.main_window.events;
 	
-	/+++Properties+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
-	import game.windows.main_window.properties;
-	mixin PropertyScreens;
-	
-	this(Master master){
-		super(master);
-		this.name = "Main Window";
-		this.type = "MainWindow";
-		
-		this.screens = new Screens!(typeof(this))(this);
-		this.add_slave(this.screens);
-	}
-	/+
 	override void on_keydown_b(){
 		import std.stdio; "bbbb".writeln;
 	}
-	+/
-	+/
 }

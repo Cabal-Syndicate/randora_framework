@@ -4,12 +4,7 @@ import scaffolds.aero.images.grunge;
 class Grunge : RNDImage{
 	this(RNDBoxBase master){
 		super(master, GRUNGE_DIRECTORY, "grunge.png");
-	}
-	/+
-	this(Master master){
-		super(master, GRUNGE_DIRECTORY, "grunge.png");
 		this.type = "Grunge";
 		this.name = "grunge";
 	}
-	+/
 }

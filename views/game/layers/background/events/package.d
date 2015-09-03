@@ -1,5 +1,7 @@
 module game.layers.background.events;
 
+package import game.layers.background.events.events;
+
 package import game.layers.background.events.draw;
 package import game.layers.background.events.init;
 package import game.layers.background.events.load;

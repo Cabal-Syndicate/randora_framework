@@ -1,35 +1,35 @@
 module game.layers.action.action;
 
 import game.layers.action;
-class Action(Master) : UILayer!(Master, Action){
-	Finger!(typeof(this)) finger = null;
+class Action : UILayer{
+	Finger finger = null;
 	
 	import game.actors.block;
-	Block0!(typeof(this)) block0 = null;
-	Block1!(typeof(this)) block1 = null;
-	Block2!(typeof(this)) block2 = null;
+	Block0 block0 = null;
+	Block1 block1 = null;
+	Block2 block2 = null;
 	
 	import game.actors.bearing;
-	Bearing!(typeof(this)) bearing = null;
+	Bearing bearing = null;
 	
-	this(Master master){
+	this(RNDBoxBase master){
 		super(master);
 		this.type = "ActionLayer";
 		this.name = "action_layer";
 		
-		this.finger = new Finger!(typeof(this))(this);
+		this.finger = new Finger(this);
 		//this.add_member(this.finger);
 		
-		this.block0 = new Block0!(typeof(this))(this);
+		this.block0 = new Block0(this);
 		//this.add_member(this.block0);
 		
-		//this.block1 = new Block1!(typeof(this))(this);
+		//this.block1 = new Block1(this);
 		//this.add_member(this.block1);
 		
-		//this.block2 = new Block2!(typeof(this))(this);
+		//this.block2 = new Block2(this);
 		//this.add_member(this.block2);
 		
-		this.bearing = new Bearing!(typeof(this))(this);
+		this.bearing = new Bearing(this);
 	}
 	
 	override void on_init(){

@@ -1,7 +1,6 @@
 module randora.engine.resource.font.events.load;
 
 mixin template Load(){
-	/+
 	override void on_load(){
 		super.on_load();
 		
@@ -19,9 +18,9 @@ mixin template Load(){
 		this.box.dimension.y = cast(int)(this.size);
 		this.box.margin.spacing = 0;
 		+/
-		this.master.dimension.x = cast(int)(this.size * this.text.length);
-		this.master.dimension.y = cast(int)(this.size);
-		this.master.margin.spacing = 0;
+		RNDBox m = cast(RNDBox)(this.master);
+		m.dimension.x = cast(int)(this.size * this.text.length);
+		m.dimension.y = cast(int)(this.size);
+		m.margin.spacing = 0;
 	}
-	+/
 }
