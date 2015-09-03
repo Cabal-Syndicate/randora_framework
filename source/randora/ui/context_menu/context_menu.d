@@ -2,10 +2,6 @@ module randora.ui.context_menu.context_menu;
 
 import randora.ui.context_menu;
 class UIContextMenu : RNDBox{
-	this(RNDBoxBase master){
-		super(master);
-	}
-	/+
 	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.ui.context_menu.events;
 	mixin Clean;
@@ -21,9 +17,8 @@ class UIContextMenu : RNDBox{
 	mixin Iterator;
 	mixin MenuItems;
 	
-	this(Master master){
+	this(RNDBoxBase master){
 		super(master);
-		this.background = new Background!(typeof(this))(this);
+		this.background = new AeroBackground(this);
 	}
-	+/
 }

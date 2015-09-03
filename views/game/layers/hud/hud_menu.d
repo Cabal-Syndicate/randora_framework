@@ -4,10 +4,6 @@ import game.layers.hud;
 class HUDMenu : UIContextMenu{
 	this(RNDBoxBase master){
 		super(master);
-	}
-	/+
-	this(Master master){
-		super(master);
 		this.type = "HUDMenu";
 		this.name = "hud_menu";
 	}
@@ -49,6 +45,5 @@ class HUDMenu : UIContextMenu{
 		super.on_mousewheel_down();
 		this.alignment.y = this.background.alignment.ALIGNMENT.BOTTOM;
 	}
-	+/
 }
 

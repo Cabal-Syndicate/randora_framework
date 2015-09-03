@@ -2,22 +2,18 @@ module randora.engine.resource.font.font;
 
 import randora.engine.resource;
 class RNDFont : RNDBaseTexture{
-	this(RNDBoxBase master){
-		super(master);
-	}
-	/+
 	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 	import randora.engine.resource.font.events;
 	mixin Init;
 	mixin Load;
 	
 	/+++Properties+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
-	import randora.engine.resouce.font.properties;
+	import randora.engine.resource.font.properties;
 	mixin Font;
 	mixin Size;
 	mixin Text;
 	
-	this(Master master, string text){
+	this(RNDBoxBase master, string text){
 		super(master, "/usr/share/fonts/truetype/ubuntu-font-family/", "UbuntuMono-R.ttf");
 		this.text = text;
 	}
@@ -26,5 +22,4 @@ class RNDFont : RNDBaseTexture{
 		SDL_DestroyTexture(this.sdl_texture);
 		this.sdl_texture = null;
 	}
-	+/
 }

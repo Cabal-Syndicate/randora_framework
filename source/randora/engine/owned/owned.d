@@ -15,7 +15,10 @@ class RNDOwned : RNDObject{
 	RNDOwned[] slaves = null;
 	
 	@property{
-		//public override RNDApp application(){ return this.master.application(); }
+		public override RNDObject application(){ return this.master.application(); }
+		//import randora.engine.app;
+		//RND application = null;
+		//public ref RNDApp application(){ return this.master.application(); }
 		//public override RNDWindow window(){ return this.master.window(); }
 	}
 	

@@ -2,7 +2,6 @@ module randora.ui.context_menu.events.load;
 
 import randora.ui.context_menu.events;
 mixin template Load(){
-	/+
 	override void on_load(){
 		super.on_load();
 		this.background.load();
@@ -10,7 +9,7 @@ mixin template Load(){
 	
 	override void post_load(){
 		super.post_load();
-		foreach(int i, UIMenuItem!(Master, ObjectType) menu_item; this.menu_items){
+		foreach(int i, UIMenuItem menu_item; this.menu_items){
 			//menu_item.box.position.x = 10;
 			menu_item.position.x = 10;
 			menu_item.load();
@@ -21,5 +20,4 @@ mixin template Load(){
 		}
 		this.iterator = 0;
 	}
-	+/
 }
