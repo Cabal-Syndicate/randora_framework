@@ -11,7 +11,7 @@ class RNDOwned : RNDObject{
 	mixin PropertyApp;
 	mixin PropertyMaster;
 
-        mixin PropertySlaves;
+	mixin PropertySlaves;
 
 	RNDOwned master = null;
 
