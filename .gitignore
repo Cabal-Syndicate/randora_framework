@@ -1,5 +1,6 @@
 #Backup Files
 *~
+*.swp
 
 #Documentation Files
 docs.json
