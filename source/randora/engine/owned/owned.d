@@ -15,11 +15,10 @@ class RNDOwned : RNDObject{
 	/+++Properties+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 
 	import randora.engine.owned.properties;
-	mixin PropertyApplication;
-	mixin PropertyMaster!(RNDOwned);
+	mixin Properties;
 
-	mixin PropertySlaves;
-
+		//@property {
+		//	public override RNDObject application(){ return this.master.application(); }
 		//import randora.engine.app;
 		//RND application = null;
 		//public ref RNDApp application(){ return this.master.application(); }

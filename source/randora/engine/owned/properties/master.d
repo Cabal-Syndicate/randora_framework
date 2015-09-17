@@ -1,6 +1,6 @@
 module randora.engine.owned.properties.master;
 
-mixin template PropertyMaster(T){
+mixin template PropertyMaster(){
 
     public RNDOwned master = null;
 
