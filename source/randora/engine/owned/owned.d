@@ -23,5 +23,4 @@ class RNDOwned : RNDObject{
 		//RND application = null;
 		//public ref RNDApp application(){ return this.master.application(); }
 		//public override RNDWindow window(){ return this.master.window(); }
-	}
 }
