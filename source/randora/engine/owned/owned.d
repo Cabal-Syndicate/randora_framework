@@ -5,7 +5,7 @@ class RNDOwned : RNDObject{
 	/+++Constructors+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 
 	import randora.engine.owned.constructors;
-	mixin Constructor!(RNDOwned);
+	mixin Constructor;
 
 	/+++Events+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/
 
