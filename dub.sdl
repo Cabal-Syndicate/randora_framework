@@ -1,0 +1,52 @@
+name "randora_engine"
+description "Randora Engine."
+copyright "Copyright © 2015, Master Foo"
+authors "Master Foo"
+homepage "https://github.com/Cabal-Syndicate"
+license "Attribution-NonCommercial-ShareAlike 4.0 International"
+
+dependency "derelict-sdl2" version="~>1.9.5"
+dependency "derelict-gl3" version=">=1.0.9"
+
+sourcePaths "public" "scaffolds" "source" "views"
+targetPath "bin"
+
+libs "SDL2" "SDL2_image" "SDL2_ttf" "SDL2_mixer"
+
+buildType "plain" {
+	buildOptions
+}
+
+buildType "debug" {
+	buildOptions "debugMode" "debugInfo"
+	dflags "-g" "-debug"
+}
+
+buildType "release" {
+	buildOptions "releaseMode" "optimize" "inline"
+}
+
+buildType "unittest" {
+	buildOptions "unittests" "debugMode" "debugInfo"
+}
+
+buildType "docs" {
+	buildOptions "syntaxOnly"
+}
+
+buildType "ddox" {
+	buildOptions "syntaxOnly"
+	dflags "-c" "Df__dummy.html" "-Xfdocs.json"
+}
+
+buildType "profile" {
+	buildOptions "profile" "optimize" "inline" "debugInfo"
+}
+
+buildType "cov" {
+	buildOptions "coverage" "debugInfo"
+}
+
+buildType "unittest-cov" {
+	buildOptions "unittests" "coverage" "debugMode" "debugInfo"
+}
